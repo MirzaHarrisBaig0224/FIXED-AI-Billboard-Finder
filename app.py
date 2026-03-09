@@ -11,7 +11,7 @@ app = Flask(__name__)
 # -----------------------------
 # GROQ CLIENT
 # -----------------------------
-groq_client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+groq_client = Groq(api_key=os.environ.get("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"))
 
 # -----------------------------
 # DATABASE
@@ -233,3 +233,4 @@ def recommend():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT",8080))
     app.run(host="0.0.0.0", port=port)
+
