@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selmore AI Billboard Finder</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="page-shell" id="pageShell">
+        <header class="hero">
+            <div class="hero-inner">
+                <p class="eyebrow">SEL​MORE AI PLANNER</p>
+                <h1>Find the Right Billboards with AI</h1>
+                <p class="hero-text">
+                    Describe your campaign in plain English and let the system surface the best matching billboards from your real database.
+                </p>
+
+                <div class="search-wrap">
+                    <textarea
+                        id="prompt"
+                        class="search-input"
+                        placeholder="Example: Telecom campaign in Karachi targeting heavy commuter traffic, need large high-visibility billboards on major roads."></textarea>
+
+                    <button id="findBtn" class="find-btn">FIND</button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loading-box">
+            <div class="spinner"></div>
+            <h3>Finding the best billboards...</h3>
+            <p>Reading your prompt, scanning the database, and ranking the strongest matches.</p>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div id="resultsModal" class="modal hidden">
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-panel">
+            <div class="modal-header">
+                <div>
+                    <p class="modal-kicker">AI Recommendations</p>
+                    <h2>Best Matching Billboards</h2>
+                    <p id="intentSummary" class="intent-summary"></p>
+                </div>
+                <button id="closeModalBtn" class="close-btn">&times;</button>
+            </div>
+
+            <div id="resultsGrid" class="results-grid"></div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
