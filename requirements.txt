@@ -3,5 +3,3 @@ pandas
 mysql-connector-python
 ollama
 gunicorn
-re
-json
